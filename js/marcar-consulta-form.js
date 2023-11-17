@@ -207,6 +207,7 @@ function getFormData() {
               phone_input.style.display = "inline-block";
               email_input.style.display = "none";
               balloon_email.style.display = "none";
+              email_input.value = "";
 
               form_data.append("contact_phone", phone_input.value);
               form_data.append("contact_email", email_input.value);
@@ -214,6 +215,7 @@ function getFormData() {
               phone_input.style.display = "none";
               email_input.style.display = "inline-block";
               balloon_email.style.display = "flex";
+              phone_input.value = "";
 
               form_data.append("contact_phone", phone_input.value);
               form_data.append("contact_email", email_input.value);
@@ -239,6 +241,7 @@ function getFormData() {
         "#contact-form #contact-email-active"
       );
 
+      // if (e.keyCode == 13) {
       var controlEmail = false;
       if (phone_input.style.display != "none" && email_input.style.display == "none") {
         if (String(phone_input.value).length < 9) {
@@ -260,8 +263,8 @@ function getFormData() {
           "display",
           "flex"
         );
-      }
-      else {
+      } 
+      else{
         $("#contact-form .balloon-phone-error-empty").css(
           "display",
           "none"
@@ -273,8 +276,8 @@ function getFormData() {
           "display",
           "flex"
         );
-      }
-      else {
+      } 
+      else{
         $("#contact-form .balloon-email-error-empty").css(
           "display",
           "none"
@@ -285,10 +288,35 @@ function getFormData() {
         var verifyEmail = vm.checkEmail(email_input.value);
         if (verifyEmail) {
           controlEmail = true;
+          $("#contact-form .balloon-email-error").css("display", "none");
         } else {
           $("#contact-form .balloon-email-error").css("display", "flex");
         }
       }
+
+      if (
+        (phone_input.value != "" &&
+          email_input.value != "" &&
+          controlEmail == true) ||
+        (phone_input.value != "" && email_input.style.display == "none") ||
+        (email_input.value != "" &&
+          phone_input.style.display == "none" &&
+          controlEmail == true)
+      ) {
+        $("#contact-form .balloon-phone-error").css("display", "none");
+        $("#contact-form .balloon-email-error").css("display", "none");
+        $("#contact-form .p1").removeClass("active-pg");
+        $("#contact-form .p2").addClass("active-pg");
+
+        $("#contact-form .p0").css("pointer-events", "none");
+        $("#contact-form .p1").css("pointer-events", "none");
+        $("#contact-form .p2").css("pointer-events", "all");
+        $("#contact-form .p3").css("pointer-events", "none");
+        $("#contact-form .p4").css("pointer-events", "none");
+
+        $("#contact-form .p2 .text").animate({ left: 0, opacity: 1 }, 500);
+      }
+      // }
     });
 
     $('#contact-form div[tabindex="1"]').keyup(function (e) {
