@@ -295,10 +295,10 @@ function getFormData() {
       }
 
       if (
-        (phone_input.value != "" &&
+        ((phone_input.value != "" && String(phone_input.value).length >= 9) &&
           email_input.value != "" &&
           controlEmail == true) ||
-        (phone_input.value != "" && email_input.style.display == "none") ||
+        ((phone_input.value != "" && String(phone_input.value).length >= 9) && email_input.style.display == "none") ||
         (email_input.value != "" &&
           phone_input.style.display == "none" &&
           controlEmail == true)
