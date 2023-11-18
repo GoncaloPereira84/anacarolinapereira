@@ -84,13 +84,13 @@ include "include/header.php";
 <div class="contacto-wrapper-contactos movement">
     <div id="contacto">
       <div class="left">
-        <div class="title main">Onde Estamos</div>
+        <div class="title main">Contactos</div>
         <div class="line"></div>
         <div class="copy">
-          <div class="topic">
+          <!-- <div class="topic">
             <div class="txt bold">Horário de Atendimento</div>
-            <?php
-                $sql_query = "SELECT * 
+             <-?php
+               /* $sql_query = "SELECT * 
                 from home_contactos";
                 
                 $result = mysqli_query($conn, $sql_query);
@@ -102,11 +102,10 @@ include "include/header.php";
 
                 foreach ($contact as $c) {
                   echo '<div class="txt">'.$c['horario'].'</div>';
-                }
+                }*/
               ?>
-          </div>
+          </div> -->
           <div class="topic conts">
-            <div class="txt bold">Contactos</div>
             <div>
               <div class="icon">
                 <img src="<?php echo IMG_PATH;?>/phone.svg" alt />
@@ -145,16 +144,31 @@ include "include/header.php";
                   echo '<div class="txt">'.$c['address'].'</div>';
                 }
               ?>
-              
+            </div>
+          </div>
+          <div class="topic">
+            <div style="display: flex">
+              <div class="icon">
+                <img src="<?php echo IMG_PATH;?>/location.svg" alt />
+              </div>
+              <div class="txt">Rua Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq <br/>3510-024 Viseu</div>;
             </div>
           </div>
         </div>
       </div>
-      <?php
-        foreach ($contact as $c) {
-          echo '<div class="right">'.$c['google_maps_code'].'</div>';
-        }
-      ?>
+      <div class="right">
+        <div class="iframe-container">
+          <div class="iframe-title">Coimbra</div>
+          <iframe title="Morada de Coimbra" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.7941210979407!2d-8.421087885152357!3d40.21364237938923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd22f90cd124ea8b%3A0xba08bbce25b52ecd!2sR.%20Machado%20de%20Castro%207%20C%2C%20Coimbra!5e0!3m2!1spt-PT!2spt!4v1597231604896!5m2!1spt-PT!2spt" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+      <div class="right">
+        <div class="iframe-container">
+          <div class="iframe-title">Viseu</div>
+          <iframe title="Morada de Viseu" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.744239028587!2d-7.917203823563313!3d40.65756794094549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23364d5ea842ab%3A0x33c611d3136f9830!2sR.%20Conselheiro%20Afonso%20de%20Melo%2C%203510-024%20Viseu!5e0!3m2!1spt-PT!2spt!4v1700309491379!5m2!1spt-PT!2spt" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
 
