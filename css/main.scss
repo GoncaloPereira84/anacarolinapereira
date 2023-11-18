@@ -9213,7 +9213,7 @@ body {
 
             >div {
                 //flex: 1 1 auto;
-                width: 40%;
+                //width: 40%;
 
                 @media only screen and (min-width: 300px) and (max-width: 767px) {
                     width: 100%;
@@ -9369,7 +9369,7 @@ body {
             }
 
             .right {
-                height: 60%;
+                height: 50%;
                 //margin-right: pxToEm(70);
                 flex: 1;
                 padding-left: 20px;
@@ -9398,7 +9398,6 @@ body {
                     color: #fff;
                     padding: 5px;
                     text-align: center;
-                    font-size: 18px;
                 }
             }
         }
