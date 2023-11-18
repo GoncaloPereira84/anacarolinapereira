@@ -87,10 +87,8 @@ include "include/header.php";
         <div class="title main">Contactos</div>
         <div class="line"></div>
         <div class="copy">
-          <!-- <div class="topic">
-            <div class="txt bold">Horário de Atendimento</div>
-             <-?php
-               /* $sql_query = "SELECT * 
+             <?php
+               $sql_query = "SELECT * 
                 from home_contactos";
                 
                 $result = mysqli_query($conn, $sql_query);
@@ -99,12 +97,7 @@ include "include/header.php";
                 while ($row = mysqli_fetch_assoc($result)) {
                     $contact[] = $row;
                 }
-
-                foreach ($contact as $c) {
-                  echo '<div class="txt">'.$c['horario'].'</div>';
-                }*/
               ?>
-          </div> -->
           <div class="topic conts">
             <div>
               <div class="icon">
