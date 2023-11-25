@@ -37,16 +37,16 @@ include "include/header.php";
 
             $colored = $s['display_order'] % 2 === 0 ? '' : 'blue';
 
-            $bg_img = 'style="background-image:url(https://www.anacarolinapereira.pt'.$trimmed . ');"';
-            $bg_img_mobile = 'style="background-image:url(https://www.anacarolinapereira.pt'.$trimmed_mob . ');"';
+            $bg_img = 'style="background-image:url(https://www.anacarolinapereira.pt' . $trimmed . ');"';
+            $bg_img_mobile = 'style="background-image:url(https://www.anacarolinapereira.pt' . $trimmed_mob . ');"';
             $display_svg = $s['img'] != 'none' ? 'flex' : 'none';
 
             echo '
                 <a class="slide-a ' . $active . '" data-slide-id="' . $s['id'] . '" href="' . $s['link'] . '">
                     <div class="slide ' . $colored . '" ' . $bg_img . '>
                         <div class="svg-container" style="display: ' . $display_svg . '">';
-                            include_once('illustrations/' . $s['img'] . '.php');
-                        echo '</div>
+            include_once('illustrations/' . $s['img'] . '.php');
+            echo '</div>
         
                         <div class="copy" style="display: ' . $display_svg . '">
                             <div class="title">' . $s['title'] . '</div>
@@ -64,8 +64,10 @@ include "include/header.php";
     <div class="indicators">
         <?php
         for ($i = 1; $i < $count_i; $i++) {
-            if ($i == 1) echo '<div class="ind active" onClick="currentSlide(' . $i . ')"></div>';
-            else echo '<div class="ind" onClick="currentSlide(' . $i . ')"></div>';
+            if ($i == 1)
+                echo '<div class="ind active" onClick="currentSlide(' . $i . ')"></div>';
+            else
+                echo '<div class="ind" onClick="currentSlide(' . $i . ')"></div>';
         }
         ?>
     </div>
@@ -128,17 +130,17 @@ include "include/header.php";
             }
 
             foreach ($esp as $e) {
-                if($e['img_src'] != '' || $e['img_src'] != null){
+                if ($e['img_src'] != '' || $e['img_src'] != null) {
                     $img = $e['img_src'];
                     $dots = '/var/www/vhosts/anacarolinapereira.pt/backoffice';
                     $trimmed = str_replace($dots, '', $img);
                 } else {
                     $img = 'https://www.anacarolinapereira.pt/img/logo.png';
                 }
-                
+
 
                 echo '<div class="especialidade">
-                        <img alt="Imagem de ' . $e['title'] . '" class="icon" src="https://www.anacarolinapereira.pt'.$trimmed . '">
+                        <img alt="Imagem de ' . $e['title'] . '" class="icon" src="https://www.anacarolinapereira.pt' . $trimmed . '">
                         <h3 class="txt-big">' . $e['title'] . '</h3>
                         <div class="copy">' . $e['short_description'] . '</div>
                         <a title="' . $e['title'] . '" href="/servicos#' . $e['slug'] . '">
@@ -200,14 +202,17 @@ include "include/header.php";
                 $dots = '/var/www/vhosts/anacarolinapereira.pt/backoffice';
                 $trimmed = str_replace($dots, '', $img);
 
-                if ($f['categoria_id'] == 1) $categoria = 'formacao';
-                else if ($f['categoria_id'] == 2) $categoria = 'curso';
-                else if ($f['categoria_id'] == 3) $categoria = 'webinar';
+                if ($f['categoria_id'] == 1)
+                    $categoria = 'formacao';
+                else if ($f['categoria_id'] == 2)
+                    $categoria = 'curso';
+                else if ($f['categoria_id'] == 3)
+                    $categoria = 'webinar';
 
                 echo '<a title="' . $f['title'] . '" href="/academia/' . $categoria . '/' . $f['slug'] . '">
                         <div class="card">
                             <div class="icon">
-                                <img alt="Imagem de ' . $f['title'] . '"  src="https://www.anacarolinapereira.pt/'.$trimmed . '">
+                                <img alt="Imagem de ' . $f['title'] . '"  src="https://www.anacarolinapereira.pt/' . $trimmed . '">
                             </div>
                             
                             <div class="card-title">' . $f['title'] . '</div>
@@ -254,15 +259,23 @@ include "include/header.php";
                     $positionImg = $d['display_order'] % 2 == 0 ? 'left' : 'right';
                     $positionContent = $d['display_order'] % 2 == 0 ? 'right' : 'left';
 
-                    if ($d['formacao_categoria_id'] == 1) $categoria = 'formacao';
-                    else if ($d['formacao_categoria_id'] == 2) $categoria = 'curso';
-                    else if ($d['formacao_categoria_id'] == 3) $categoria = 'webinar';
-                    else $categoria = 'blog';
+                    if ($d['formacao_categoria_id'] == 1)
+                        $categoria = 'formacao';
+                    else if ($d['formacao_categoria_id'] == 2)
+                        $categoria = 'curso';
+                    else if ($d['formacao_categoria_id'] == 3)
+                        $categoria = 'webinar';
+                    else
+                        $categoria = 'blog';
 
-                    if ($d['formacao_categoria_id'] == 1) $categoria_title = 'Formação';
-                    else if ($d['formacao_categoria_id'] == 2) $categoria_title = 'Curso';
-                    else if ($d['formacao_categoria_id'] == 3) $categoria_title = 'Webinar';
-                    else $categoria_title = 'Blog';
+                    if ($d['formacao_categoria_id'] == 1)
+                        $categoria_title = 'Formação';
+                    else if ($d['formacao_categoria_id'] == 2)
+                        $categoria_title = 'Curso';
+                    else if ($d['formacao_categoria_id'] == 3)
+                        $categoria_title = 'Webinar';
+                    else
+                        $categoria_title = 'Blog';
 
                     $isFull = $d['is_full'] == 1 ? "is-full" : "";
                     $hasVagas = $d['last_vagas'] == 1 ? "has-vagas" : "";
@@ -273,7 +286,7 @@ include "include/header.php";
                         $date_end = '';
                         $calendar = true;
                         $calendar1 = true;
-                    } else if($d['date_start'] == '0000-00-00'){
+                    } else if ($d['date_start'] == '0000-00-00') {
                         $date_start = '';
                         $date_end = '';
                         $calendar = false;
@@ -290,7 +303,7 @@ include "include/header.php";
 
                     echo '<div data-card-id="' . $d['id'] . '" class="card ' . $active_d . '">
                             <div class="card-img ' . $positionImg . '">
-                                <img alt="Imagem de ' . $d['title'] . '" src="'.$trimmed . '">
+                                <img alt="Imagem de ' . $d['title'] . '" src="' . $trimmed . '">
                             </div>
                             <div class="card-content ' . $positionContent . '">
                                 <div class="card-header">
@@ -301,7 +314,7 @@ include "include/header.php";
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h3 class="card-title '.$bt.'">' . $d['title'] . '</h3>
+                                    <h3 class="card-title ' . $bt . '">' . $d['title'] . '</h3>
                                     <div class="card-text">' . $d['text'] . '...</div>
                                     <div class="card-date">
                                         <a title="' . $d['title'] . '" href="' . $d['url_code'] . '">
@@ -310,12 +323,12 @@ include "include/header.php";
                                             </div>
                                         </a>
                                         <div style="">
-                                            <div class="txt" style="display: '.$display.';">
+                                            <div class="txt" style="display: ' . $display . ';">
                                                 ' . $date_start . '
                                                 <br />
                                                 ' . $date_end . '
                                             </div>
-                                            <img class="icon" src="img/calendar.svg" alt="Ícone de calendário" style="display: '.$display.';">
+                                            <img class="icon" src="img/calendar.svg" alt="Ícone de calendário" style="display: ' . $display . ';">
                                         </div>
                                         
                                     </div>
@@ -328,8 +341,10 @@ include "include/header.php";
             <div class="indicators-dest">
                 <?php
                 for ($i = 0; $i < $count_d; $i++) {
-                    if ($i == 0) echo '<div class="ind-dest active-dest"></div>';
-                    else echo '<div class="ind-dest"></div>';
+                    if ($i == 0)
+                        echo '<div class="ind-dest active-dest"></div>';
+                    else
+                        echo '<div class="ind-dest"></div>';
                 }
                 ?>
             </div>
@@ -357,7 +372,7 @@ include "include/header.php";
             $trimmed = str_replace($dots, '', $img);
 
             echo '<div class="left">
-                    <img alt="Fotografia de ' . $e['name'] . '" title="Fotografia de ' . $e['name'] . '" class="pic" src="https://www.anacarolinapereira.pt/'.$trimmed . '">
+                    <img alt="Fotografia de ' . $e['name'] . '" title="Fotografia de ' . $e['name'] . '" class="pic" src="https://www.anacarolinapereira.pt/' . $trimmed . '">
                     <div class="name">' . $e['name'] . '</div>
                     <div class="cargo">' . $e['cargo'] . '</div>
                 </div>
@@ -402,7 +417,7 @@ include "include/header.php";
                                 </div>
                                 <div class="txt">
                                     Fale connosco através do
-                                    <a title="Telefone" href="tel:+351'.$c['tlf_1'].'" id="tlf1">+351 ' . $c['tlf_1'] . '</a>
+                                    <a title="Telefone" href="tel:+351' . $c['tlf_1'] . '" id="tlf1">+351 ' . $c['tlf_1'] . '</a>
                                 </div>
                             </div>
 
@@ -421,6 +436,12 @@ include "include/header.php";
                                 </div>
                                 <div class="txt">' . $c['address'] . '</div>
                             </div>
+                            <div class="topic">
+                                <div class="icon">
+                                    <img src="img/location.svg" alt="Ícone de localização" />
+                                </div>
+                                <div class="txt">Rua Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq <br />3510-024 Viseu</div
+                            </div>
                         </div>
                         <div class="cta" onClick="openContactForm()">
                             <div class="btn blue">
@@ -428,7 +449,11 @@ include "include/header.php";
                             </div>
                         </div>
                     </div>
-                    <div class="right">' . $c['google_maps_code'] . '</div>';
+                    <div class="right"><div style="font-size: 18px;margin-top: -10px;" class="iframe-title">Coimbra</div>' . $c['google_maps_code'] . '</div>
+                    <div class="right"><div style="font-size: 18px;margin-top: -10px;" class="iframe-title">Viseu</div><iframe title="Morada de Viseu"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.744239028587!2d-7.917203823563313!3d40.65756794094549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23364d5ea842ab%3A0x33c611d3136f9830!2sR.%20Conselheiro%20Afonso%20de%20Melo%2C%203510-024%20Viseu!5e0!3m2!1spt-PT!2spt!4v1700309491379!5m2!1spt-PT!2spt"
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe></div>';
         }
         ?>
     </div>

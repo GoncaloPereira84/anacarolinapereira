@@ -144,7 +144,7 @@ include "include/header.php";
             <div class="icon">
               <img src="<?php echo IMG_PATH; ?>/location.svg" alt />
             </div>
-            <div class="txt">Rua Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq <br />3510-024 Viseu</div>
+            <div class="txt">Rua Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq<br />3510-024 Viseu</div>
           </div>
         </div>
       </div>
