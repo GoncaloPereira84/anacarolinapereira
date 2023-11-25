@@ -396,7 +396,7 @@ include "include/header.php";
     <div id="contacto">
         <?php
         $contactos_query = "SELECT * 
-            from home_contactos";
+            FROM home_contactos";
 
         $result_cont = mysqli_query($conn, $contactos_query);
         $contactos = array();
@@ -406,7 +406,6 @@ include "include/header.php";
         }
 
         foreach ($contactos as $c) {
-
             echo '<div class="left">
                         <h2 class="title main">Esperamos por si!</h2>
                         <div class="line"></div>
@@ -440,7 +439,7 @@ include "include/header.php";
                                 <div class="icon">
                                     <img src="img/location.svg" alt="Ícone de localização" />
                                 </div>
-                                <div class="txt">R. Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq<br />3510-024 Viseu</div
+                                <div class="txt">R. Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq<br />3510-024 Viseu</div>
                             </div>
                         </div>
                         <div class="cta" onClick="openContactForm()">
@@ -449,20 +448,23 @@ include "include/header.php";
                             </div>
                         </div>
                     </div>';
-                
-                    echo '<div class="right"><div style="font-size: 18px;margin-top: -10px;" class="iframe-title">Coimbra</div>' . $c['google_maps_code'] . '</div>';
+
+            echo '<div class="right">
+                        <div style="font-size: 18px; margin-top: -10px;" class="iframe-title">Coimbra</div>' . $c['google_maps_code'] . '
+                    </div>';
         }
         ?>
-        
+
         <div class="right">
-            <div style="font-size: 18px;margin-top: -10px;" class="iframe-title">Viseu</div><iframe
-                title="Morada de Viseu"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.744239028587!2d-7.917203823563313!3d40.65756794094549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23364d5ea842ab%3A0x33c611d3136f9830!2sR.%20Conselheiro%20Afonso%20de%20Melo%2C%203510-024%20Viseu!5e0!3m2!1spt-PT!2spt!4v1700309491379!5m2!1spt-PT!2spt"
-                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-        </div>';
+            <div style="font-size: 18px; margin-top: -10px;" class="iframe-title">Viseu</div>
+            <iframe title="Morada de Viseu"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.744239028587!2d-7.917203823563313!3d40.65756794094549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23364d5ea842ab%3A0x33c611d3136f9830!2sR.%20Conselheiro%20Afonso%20de%20Melo%2C%203510-024%20Viseu!5e0!3m2!1spt-PT!2spt!4v1700309491379!5m2!1spt-PT!2spt"
+                    width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+        </div>
     </div>
 </div>
+
 
 <?php
 include "include/footer.php";
