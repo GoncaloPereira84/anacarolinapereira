@@ -25,7 +25,7 @@
                                     <a title="E-mail" class="link" href="mailto:' . $c['email_1'] . '">' . $c['email_1'] . '</a>
                                     <br />
                                     <p>' . $c['address'] . '</p>
-                                    <p>Rua Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq<br />3510-024 Viseu</p>
+                                    <p>Rua Conselheiro Afonso de Melo, Lote B,<br>39, 4.º Esq, 3510-024 Viseu</p>
                                 </div>
                             </div>';
                     }
