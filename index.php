@@ -439,7 +439,7 @@ include "include/header.php";
                                 <div class="icon">
                                     <img src="img/location.svg" alt="Ícone de localização" />
                                 </div>
-                                <div class="txt">R. Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq<br />3510-024 Viseu</div>
+                                <div class="txt">Rua Conselheiro Afonso de Melo, Lote B, 39, 4.º Esq<br />3510-024 Viseu</div>
                             </div>
                         </div>
                         <div class="cta" onClick="openContactForm()">
