@@ -68,8 +68,8 @@ include "include/header.php";
         ?> -->
 <!-- </div>
 </div> -->
-<div class="container">
-    <div class="row d-flex justify-content-center">
+<div class="servicos-wrapper">
+    <div class="card movement">
         <blockquote class="instagram-media mx-1" data-instgrm-captioned
             data-instgrm-permalink="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
