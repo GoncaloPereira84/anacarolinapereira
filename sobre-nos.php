@@ -72,10 +72,9 @@ include "include/header.php";
 <div class="clinic-wrapper">
     <div class="historia">
         <div class="copy">
-            <h2 class="title">A nossa história</h2>
             <div class="container">
-
-                <div class="p">
+                <div class="paragraph ">
+                    <h2 class="title">A nossa história</h2>
                     <blockquote class="instagram-media mx-1" data-instgrm-captioned
                         data-instgrm-permalink="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
                         data-instgrm-version="14"
@@ -172,6 +171,7 @@ include "include/header.php";
                     </blockquote>
                 </div>
                 <div class="paragraph">
+                    <h2 class="title">A nossa história</h2>
                     <blockquote class="instagram-media mx-1" data-instgrm-captioned
                         data-instgrm-permalink="https://www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading"
                         data-instgrm-version="14"

@@ -2434,7 +2434,7 @@ html a {
 
 #app .equipa-wrapper {
     background-color: #fff;
-    height: 61.875rem;
+    height: 158.1875rem;
     padding: 0 4.0625rem;
     display: flex;
     align-items: center;
@@ -10642,8 +10642,13 @@ html a {
     max-width: 45.625rem;
     width: 100%;
     height: 100%;
-    text-align: justify
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 @media only screen and (min-width:768px) and (max-width:1199px) {
     #app .clinic-wrapper .historia .copy .container .paragraph {
