@@ -69,7 +69,7 @@ include "include/header.php";
 <!-- </div>
 </div> -->
 
-<div class="historia-wrapper">
+<div class="clinic-wrapper">
     <div class="historia">
         <div class="copy">
             <h2 class="title">A nossa história</h2>
