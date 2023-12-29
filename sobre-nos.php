@@ -74,7 +74,7 @@ include "include/header.php";
         <div class="copy">
             <div class="container">
                 <div class="paragraph ">
-                    <h2 class="title">A nossa história</h2>
+                    <h2 class="title">Clínica Viseu</h2>
                     <blockquote class="instagram-media mx-1" data-instgrm-captioned
                         data-instgrm-permalink="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
                         data-instgrm-version="14"
@@ -171,7 +171,7 @@ include "include/header.php";
                     </blockquote>
                 </div>
                 <div class="paragraph">
-                    <h2 class="title">A nossa história</h2>
+                    <h2 class="title">Clínica Coimbra</h2>
                     <blockquote class="instagram-media mx-1" data-instgrm-captioned
                         data-instgrm-permalink="https://www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading"
                         data-instgrm-version="14"

@@ -10514,15 +10514,13 @@ html a {
     padding-left: 2.1875rem;
 }
 
-
-
-
 #app .clinic-wrapper {
     background-color: #fff;
-    height: 9.875rem;
+    height: 10.875rem;
     padding: 0 18.75rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 35%;
     justify-content: center
 }
 
