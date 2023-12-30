@@ -10818,3 +10818,10 @@ html a {
     font-weight: bold;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        max-width: 90%; /* Largura máxima para dispositivos móveis */
+        width: 90%; /* Largura inicial para dispositivos móveis */
+    }
+}
