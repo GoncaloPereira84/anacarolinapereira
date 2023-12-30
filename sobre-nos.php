@@ -61,7 +61,7 @@ include "include/header.php";
         <div class="cards-wrapper">
             <a title="O Método Rorschach na prática clínica"
                 href="/academia/formacao/o-metodo-rorschach-na-pratica-clinica">
-                <div class="card">
+                <div class="card" onclick="openModal('modal-rorschach')">
                     <div class="icon">
                         <img alt="Imagem de O Método Rorschach na prática clínica"
                             src="https://www.anacarolinapereira.pt//uploads/formacoes/rorschach.jpeg">
@@ -83,7 +83,7 @@ include "include/header.php";
                     </div>
                 </div>
             </a><a title="A Clínica da infância | Q&amp;A" href="/academia/webinar/a-clinica-da-infancia-qa">
-                <div class="card">
+                <div class="card" onclick="openModal('modal-infancia')">
                     <div class="icon">
                         <img alt="Imagem de A Clínica da infância | Q&amp;A"
                             src="https://www.anacarolinapereira.pt//uploads/mobile-1609809_1920.jpg">
@@ -104,6 +104,24 @@ include "include/header.php";
                 </div>
             </a>
         </div>
+    </div>
+</div>
+
+<div id="modal-rorschach" class="modal">
+    <div class="modal-content">
+        <!-- Conteúdo do modal para o Método Rorschach -->
+        <span class="closee" onclick="closeModal('modal-rorschach')">&times;</span>
+        <h2>O Método Rorschach na prática clínica</h2>
+        <p>Formação clínica que pretende pensar os fundamentos conceptuais e metodológicos...</p>
+    </div>
+</div>
+
+<div id="modal-infancia" class="modal">
+    <div class="modal-content">
+        <!-- Conteúdo do modal para A Clínica da infância | Q&A -->
+        <span class="closee" onclick="closeModal('modal-infancia')">&times;</span>
+        <h2>A Clínica da infância | Q&A</h2>
+        <p>Webinar que pretende ser um espaço de partilha de conhecimentos...</p>
     </div>
 </div>
 
@@ -275,6 +293,18 @@ include "include/header.php";
         </div>
     </div>
 </div>
+
+<script>
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    }
+
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+    }
+</script>
 
 <?php
 include "include/footer.php";
