@@ -60,11 +60,6 @@ include "include/header.php";
         <div class="cards-wrapper">
             <a title="O Método Rorschach na prática clínica">
                 <div class="card" onclick="openModal('modal-rorschach')">
-                    <div class="icon">
-                        <img alt="Imagem de O Método Rorschach na prática clínica"
-                            src="https://www.anacarolinapereira.pt//uploads/formacoes/rorschach.jpeg">
-                    </div>
-
                     <div class="card-title">Clínica Coimbra</div>
                     <div class="card-copy">
                         <i>
