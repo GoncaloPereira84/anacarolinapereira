@@ -43,6 +43,72 @@ include "include/header.php";
     </div>
 </div>
 
+
+<div class="reels-wrapper movement">
+    <div id="formacoes">
+        <div class="copy-content">
+            <h3 class="title main">As Nossas Formações</h3>
+            <div class="line"></div>
+            <div class="copy">
+                <p></p>
+                <p>A Academia é um espaço de formação. De ideias. De projetos. De escritas. Que alia o conhecimento
+                    científico à prática clínica e o aproxima de si. A Academia é, e assim ambiciona, um espaço que
+                    concilia o saber técnico e clínico ao pluralismo de quem sabe que, como nos ensina a tradição
+                    oral:<br><br><i>A desmanchar e a fazer é que se chega a aprender.</i><br></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="cards-wrapper">
+            <a title="O Método Rorschach na prática clínica"
+                href="/academia/formacao/o-metodo-rorschach-na-pratica-clinica">
+                <div class="card">
+                    <div class="icon">
+                        <img alt="Imagem de O Método Rorschach na prática clínica"
+                            src="https://www.anacarolinapereira.pt//uploads/formacoes/rorschach.jpeg">
+                    </div>
+
+                    <div class="card-title">O Método Rorschach na prática clínica</div>
+                    <div class="card-copy">
+                        <i>
+                            <p>Formação clínica que pretende pensar os fundamentos conceptuais e metodológicos do método
+                                Rorschach para a sua aplicação prática na clínica da criança, do adolescente e do
+                                adulto.<br></p>
+                        </i>
+                    </div>
+                    <div class="cta">
+                        <div class="txt">saiba mais</div>
+                        <div class="arrow-cont">
+                            <i class="arrow right"></i>
+                        </div>
+                    </div>
+                </div>
+            </a><a title="A Clínica da infância | Q&amp;A" href="/academia/webinar/a-clinica-da-infancia-qa">
+                <div class="card">
+                    <div class="icon">
+                        <img alt="Imagem de A Clínica da infância | Q&amp;A"
+                            src="https://www.anacarolinapereira.pt//uploads/mobile-1609809_1920.jpg">
+                    </div>
+
+                    <div class="card-title">A Clínica da infância | Q&amp;A</div>
+                    <div class="card-copy">
+                        <i>Webinar que pretende ser um espaço de partilha de conhecimentos. Que partirá de questões
+                            colocadas, previamente, por todos os que participarem e que pretende pensar os fundamentos
+                            clínicos psicodinâmica da prática infantil</i>
+                    </div>
+                    <div class="cta">
+                        <div class="txt">saiba mais</div>
+                        <div class="arrow-cont">
+                            <i class="arrow right"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="servicos-wrapper">
     <div class="cards-wrapper">
         <?php
@@ -93,7 +159,7 @@ include "include/header.php";
                         $dots = '/var/www/vhosts/anacarolinapereira.pt/backoffice';
                         $trimmed = str_replace($dots, '', $img);
 
-                        if ($count_e-1 == 1) {
+                        if ($count_e - 1 == 1) {
                             echo '<div class="person active-equipa">
                                 <img alt="' . $e['name'] . '" class="pic" src="https://www.anacarolinapereira.pt/' . $trimmed . '">
                                 <div class="name">' . $e['name'] . '</div>
@@ -116,8 +182,10 @@ include "include/header.php";
                 <div class="indicators">
                     <?php
                     for ($i = 1; $i < $count_e; $i++) {
-                        if ($i == 1) echo '<div class="idc active-equipa" onClick="currentSlideEquipa(' . $i . ')"></div>';
-                        else echo '<div class="idc" onClick="currentSlideEquipa(' . $i . ')"></div>';
+                        if ($i == 1)
+                            echo '<div class="idc active-equipa" onClick="currentSlideEquipa(' . $i . ')"></div>';
+                        else
+                            echo '<div class="idc" onClick="currentSlideEquipa(' . $i . ')"></div>';
                     }
                     ?>
                 </div>
@@ -131,8 +199,10 @@ include "include/header.php";
                 $count_e1 = 0;
                 foreach ($equipa as $e) {
                     $count_e1++;
-                    if ($count_e1 == 1) echo '<div class="p active-equipa">' . $e['description'] . '</div>';
-                    else echo '<div class="p">' . $e['description'] . '</div>';
+                    if ($count_e1 == 1)
+                        echo '<div class="p active-equipa">' . $e['description'] . '</div>';
+                    else
+                        echo '<div class="p">' . $e['description'] . '</div>';
                 }
                 ?>
             </div>

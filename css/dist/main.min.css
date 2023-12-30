@@ -10513,3 +10513,277 @@ html a {
 .check-cont {
     padding-left: 2.1875rem;
 }
+
+
+
+
+#app .reels-wrapper {
+    background-color: #fff;
+    height: auto;
+    padding: 0 4.0625rem;
+    overflow: hidden
+}
+
+@media only screen and (min-width:1200px) {
+    #app .reels-wrapper {
+        padding: 0 5rem
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    #app .reels-wrapper {
+        padding: 0 3.75rem
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    #app .reels-wrapper {
+        padding: 0 2.5rem
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:767px) {
+    #app .reels-wrapper {
+        padding: 0 1.25rem
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper {
+        height: auto;
+        padding: 0 1.25rem
+    }
+}
+
+#app .reels-wrapper #formacoes {
+    height: 100%;
+    margin: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes {
+        margin: 0 1.25rem
+    }
+}
+
+#app .reels-wrapper #formacoes .copy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-bottom: 2.5rem
+}
+
+#app .reels-wrapper #formacoes .copy-content .title {
+    margin: 0;
+    font-weight: 400;
+    margin-top: 3.75rem;
+    color: #707070
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes .copy-content .title {
+        margin-top: 2.5rem
+    }
+}
+
+#app .reels-wrapper #formacoes .copy-content .line {
+    width: 4.9375rem;
+    height: .0625rem;
+    background-color: rgba(11, 171, 197, .6);
+    margin-top: .9375rem
+}
+
+#app .reels-wrapper #formacoes .copy-content .copy {
+    font-size: 1.25rem;
+    font-family: OS-Regular;
+    max-width: 62.5rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 1.25rem;
+    color: #707070
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper {
+    display: flex;
+    max-width: 112.5rem;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5rem;
+    height: 55%;
+    flex-wrap: wrap
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes .cards-wrapper {
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        margin-bottom: 2.5rem
+    }
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card {
+    width: 18.8125rem;
+    height: 26.9375rem;
+    background-color: #f6f6f6;
+    border-radius: 1.4375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 3.125rem;
+    cursor: pointer;
+    transition: .5s;
+    margin: 3.125rem .625rem 0 .625rem
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes .cards-wrapper .card {
+        margin: .625rem 0;
+        width: 18.8125rem;
+        height: 26.9375rem;
+        padding: 1.875rem 2.5rem
+    }
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card:hover {
+    transform: scale(1.1);
+    background-color: rgba(11, 171, 197, .6)
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card:hover .card-title {
+    color: #fff
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card:hover .card-copy {
+    color: #fff
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card:hover .cta {
+    align-self: flex-end
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card:hover .cta .txt {
+    color: #fff
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card:hover .cta .arrow-cont {
+    transform: translateX(.625rem)
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card:hover .cta .arrow-cont .arrow {
+    border: solid #fff;
+    border-width: 0 .0625rem .0625rem 0
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-color: #cbcbcb;
+    background-position: center
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes .cards-wrapper .card .icon {
+        width: 4.375rem;
+        height: 4.375rem
+    }
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .icon img {
+    height: 100%
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .card-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.375rem;
+    color: #0babc5;
+    font-weight: 700;
+    text-align: center
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .card-copy {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+    color: #a4a4a4;
+    text-align: center
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .cta {
+    width: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-end;
+    align-items: center
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes .cards-wrapper .card .cta {
+        width: 6.25rem;
+        align-self: center
+    }
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .cta .txt {
+    font-family: OS-Regular;
+    color: #0babc5;
+    text-transform: uppercase;
+    font-size: .875rem
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes .cards-wrapper .card .cta .txt {
+        color: #0babc5
+    }
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .cta .arrow-cont {
+    position: relative;
+    transition: .5s
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .cta .arrow-cont .arrow {
+    border: solid rgba(11, 171, 197, .6);
+    border-width: 0 .0625rem .0625rem 0;
+    display: inline-block;
+    padding: .125rem;
+    position: absolute;
+    top: -.125rem;
+    left: .25rem
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .cta .arrow-cont .arrow.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg)
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .cta svg {
+    width: .6875rem;
+    height: .6875rem;
+    overflow: visible
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card .cta svg .arrow {
+    fill: #0babc5;
+    transition: .5s
+}
+
+@media only screen and (min-width:300px) and (max-width:599px) {
+    #app .reels-wrapper #formacoes .cards-wrapper .card .cta svg .arrow {
+        fill: #0babc5
+    }
+}
+
+#app .reels-wrapper #formacoes .cards-wrapper .card a {
+    align-self: flex-end
+}
