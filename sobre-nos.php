@@ -59,8 +59,7 @@ include "include/header.php";
             </div>
         </div>
         <div class="cards-wrapper">
-            <a title="O Método Rorschach na prática clínica"
-                href="/academia/formacao/o-metodo-rorschach-na-pratica-clinica">
+            <a title="O Método Rorschach na prática clínica">
                 <div class="card" onclick="openModal('modal-rorschach')">
                     <div class="icon">
                         <img alt="Imagem de O Método Rorschach na prática clínica"
@@ -82,7 +81,7 @@ include "include/header.php";
                         </div>
                     </div>
                 </div>
-            </a><a title="A Clínica da infância | Q&amp;A" href="/academia/webinar/a-clinica-da-infancia-qa">
+            </a><a title="A Clínica da infância | Q&amp;A">
                 <div class="card" onclick="openModal('modal-infancia')">
                     <div class="icon">
                         <img alt="Imagem de A Clínica da infância | Q&amp;A"
