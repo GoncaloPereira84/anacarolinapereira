@@ -60,7 +60,7 @@ include "include/header.php";
         <div class="cards-wrapper">
             <a title="O Método Rorschach na prática clínica">
                 <div class="card" onclick="openModal('modal-rorschach')">
-                    <div class="card-title">Clínica Coimbra</div>
+                    <div class="card-title">Coimbra</div>
                     <div class="card-copy">
                         <i>
                             <p>De psicologia. Que desenvolve serviços que vão desde a avaliação psicológica (nas suas
@@ -78,7 +78,7 @@ include "include/header.php";
                 </div>
             </a><a title="A Clínica da infância | Q&amp;A">
                 <div class="card" onclick="openModal('modal-infancia')">
-                    <div class="card-title">Clínica Viseu</div>
+                    <div class="card-title">Viseu</div>
                     <div class="card-copy">
                         <i>De psicologia. Que desenvolve serviços que vão desde a avaliação psicológica (nas suas mais
                             diversas valências) a consultas de acompanhamento psicoterapêutico. A crianças, jovens e
