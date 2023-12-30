@@ -10789,6 +10789,7 @@ html a {
 }
 
 
+/* Estilo para os modais */
 .modal {
     display: none;
     position: fixed;
@@ -10796,26 +10797,20 @@ html a {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
+    margin: 0; height: 100%; overflow: hidden;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    position: relative; /* Adiciona essa linha */
-    top: 50%; /* Adiciona essa linha */
-    transform: translateY(-50%); /* Adiciona essa linha */
+    border-radius: 10px;
+    text-align: center;
 }
-
-.modal-open {
-    overflow: hidden;
-}
-
 
 .closee {
     color: #aaa;
@@ -10823,6 +10818,10 @@ html a {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 .modal-overlay {
