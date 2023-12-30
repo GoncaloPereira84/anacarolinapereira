@@ -10807,6 +10807,9 @@ html a {
     border: 1px solid #888;
     width: 80%;
     max-width: 600px;
+    position: relative; /* Adiciona essa linha */
+    top: 50%; /* Adiciona essa linha */
+    transform: translateY(-50%); /* Adiciona essa linha */
 }
 
 .modal-open {

@@ -297,13 +297,13 @@ include "include/header.php";
     function openModal(modalId) {
         var modal = document.getElementById(modalId);
         modal.style.display = "block";
-        document.body.classList.add("modal-open");
+        document.body.style.overflow = "hidden"; // Adiciona essa linha
     }
 
     function closeModal(modalId) {
         var modal = document.getElementById(modalId);
         modal.style.display = "none";
-        document.body.classList.remove("modal-open");
+        document.body.style.overflow = "auto"; // Adiciona essa linha
     }
 </script>
 
