@@ -298,11 +298,13 @@ include "include/header.php";
     function openModal(modalId) {
         var modal = document.getElementById(modalId);
         modal.style.display = "block";
+        document.body.classList.add("modal-open");
     }
 
     function closeModal(modalId) {
         var modal = document.getElementById(modalId);
         modal.style.display = "none";
+        document.body.classList.remove("modal-open");
     }
 </script>
 
