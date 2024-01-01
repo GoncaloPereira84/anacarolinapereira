@@ -466,26 +466,34 @@ include "include/header.php";
 <script>
     function openModalWithVideo(modalId, videoUrl) {
         var modal = document.getElementById(modalId);
-        var videoIframe = modal.querySelector('.instagram-media');
+        var iframe = modal.querySelector('iframe');
 
-        // Set the video source
-        videoIframe.setAttribute('data-instgrm-permalink', videoUrl);
+        // Atualiza o atributo src da tag iframe com a URL do vídeo
+        iframe.src = videoUrl;
 
-        // Open the modal
+        // Exibe o modal
         modal.style.display = "block";
     }
 
     function closeModalAndPauseVideo(modalId) {
         var modal = document.getElementById(modalId);
-        var videoIframe = modal.querySelector('.instagram-media');
+        var iframe = modal.querySelector('iframe');
 
-        // Pause the video by reloading the iframe
-        var videoUrl = videoIframe.getAttribute('data-instgrm-permalink');
-        videoIframe.setAttribute('src', videoUrl);
+        // Pausa o vídeo
+        iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
 
-        // Close the modal
+        // Fecha o modal
         modal.style.display = "none";
     }
+
+    window.addEventListener('click', function (event) {
+        var modals = document.querySelectorAll('.modal');
+        modals.forEach(function (modal) {
+            if (event.target === modal) {
+                closeModalAndPauseVideo(modal.id);
+            }
+        });
+    });
 </script>
 
 
