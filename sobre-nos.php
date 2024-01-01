@@ -59,7 +59,8 @@ include "include/header.php";
         </div>
         <div class="cards-wrapper">
             <a title="O Método Rorschach na prática clínica">
-                <div class="card" onclick="openModal('modal-rorschach')">
+                <div class="card"
+                    onclick="openModalWithVideo('modal-rorschach', 'https:www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading')">
                     <div class="card-title">Coimbra</div>
                     <div class="card-copy">
                         <i>
@@ -77,7 +78,8 @@ include "include/header.php";
                     </div>
                 </div>
             </a><a title="A Clínica da infância | Q&amp;A">
-                <div class="card" onclick="openModal('modal-infancia')">
+                <div class="card"
+                    onclick="openModalWithVideo('modal-infancia', 'https:www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading')">
                     <div class="card-title">Viseu</div>
                     <div class="card-copy">
                         <i>De psicologia. Que desenvolve serviços que vão desde a avaliação psicológica (nas suas mais
@@ -100,7 +102,7 @@ include "include/header.php";
 <div id="modal-rorschach" class="modal">
     <div class="modal-content">
         <!-- Conteúdo do modal para o Método Rorschach -->
-        <span class="closee" onclick="closeModal('modal-rorschach')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-rorschach')">&times;</span>
         <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
@@ -197,14 +199,13 @@ include "include/header.php";
 
 <div id="modal-infancia" class="modal">
     <div class="modal-content">
-        <!-- Conteúdo do modal para A Clínica da infância | Q&A -->
-        <span class="closee" onclick="closeModal('modal-infancia')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-infancia')">&times;</span>
         <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-permalink="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
             style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             <div style="padding:16px;"> <a
-                    href="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    href="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
                     style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
                     target="_blank">
                     <div style=" display: flex; flex-direction: row; align-items: center;">
@@ -284,7 +285,7 @@ include "include/header.php";
                 </a>
                 <p
                     style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-                    <a href="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    <a href="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
                         style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
                         target="_blank">Uma publicação partilhada por Ana Carolina Pereira (@anacarolinapereirapc)</a>
                 </p>
@@ -297,7 +298,7 @@ include "include/header.php";
 
 <!-- <div class="servicos-wrapper">
     <div class="cards-wrapper"> -->
-        <!--?php
+<!--?php
         $areas_query = "SELECT * 
             from sobre_areas
             order by display_order asc";
@@ -318,7 +319,7 @@ include "include/header.php";
                     </div>';
         }
         ?> -->
-    <!-- </div>
+<!-- </div>
 </div>  -->
 
 <div id="equipa" class="equipa-wrapper-sobre-nos">
@@ -463,24 +464,31 @@ include "include/header.php";
 </div>
 <script async src="//www.instagram.com/embed.js"></script>
 <script>
-    function openModal(modalId) {
+    function openModalWithVideo(modalId, videoUrl) {
         var modal = document.getElementById(modalId);
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
+        var videoIframe = modal.querySelector('.instagram-media');
 
-        modal.addEventListener('click', function (event) {
-            if (event.target === modal) {
-                closeModal(modalId);
-            }
-        });
+        // Set the video source
+        videoIframe.setAttribute('data-instgrm-permalink', videoUrl);
+
+        // Open the modal
+        modal.style.display = "block";
     }
 
-    function closeModal(modalId) {
+    function closeModalAndPauseVideo(modalId) {
         var modal = document.getElementById(modalId);
+        var videoIframe = modal.querySelector('.instagram-media');
+
+        // Pause the video by reloading the iframe
+        var videoUrl = videoIframe.getAttribute('data-instgrm-permalink');
+        videoIframe.setAttribute('src', videoUrl);
+
+        // Close the modal
         modal.style.display = "none";
-        document.body.style.overflow = "auto";
     }
 </script>
+
+
 
 <?php
 include "include/footer.php";
