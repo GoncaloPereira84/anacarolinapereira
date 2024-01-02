@@ -59,7 +59,7 @@ include "include/header.php";
         </div>
         <div class="cards-wrapper">
             <a title="O Método Rorschach na prática clínica">
-                <div class="card" onclick="openModal('modal-rorschach')">
+            <div class="card" onclick="openModalWithVideo('modal-rorschach', 'www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading')">
                     <div class="card-title">Coimbra</div>
                     <div class="card-copy">
                         <i>
@@ -77,7 +77,7 @@ include "include/header.php";
                     </div>
                 </div>
             </a><a title="A Clínica da infância | Q&amp;A">
-                <div class="card" onclick="openModal('modal-infancia')">
+            <div class="card" onclick="openModalWithVideo('modal-infancia', 'www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading')">
                     <div class="card-title">Viseu</div>
                     <div class="card-copy">
                         <i>De psicologia. Que desenvolve serviços que vão desde a avaliação psicológica (nas suas mais
@@ -100,7 +100,7 @@ include "include/header.php";
 <div id="modal-rorschach" class="modal">
     <div class="modal-content">
         <!-- Conteúdo do modal para o Método Rorschach -->
-        <span class="closee" onclick="closeModal('modal-rorschach')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-rorschach')">&times;</span>
         <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
@@ -198,7 +198,7 @@ include "include/header.php";
 <div id="modal-infancia" class="modal">
     <div class="modal-content">
         <!-- Conteúdo do modal para A Clínica da infância | Q&A -->
-        <span class="closee" onclick="closeModal('modal-infancia')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-infancia')">&times;</span>
         <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
@@ -463,22 +463,27 @@ include "include/header.php";
 </div>
 <script async src="//www.instagram.com/embed.js"></script>
 <script>
-    function openModal(modalId) {
+    function openModalWithVideo(modalId, videoUrl) {
         var modal = document.getElementById(modalId);
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden";
+        var videoIframe = modal.querySelector('.instagram-media');
 
-        modal.addEventListener('click', function (event) {
-            if (event.target === modal) {
-                closeModal(modalId);
-            }
-        });
+        // Set the video source
+        videoIframe.setAttribute('data-instgrm-permalink', videoUrl);
+
+        // Open the modal
+        modal.style.display = "block";
     }
 
-    function closeModal(modalId) {
+    function closeModalAndPauseVideo(modalId) {
         var modal = document.getElementById(modalId);
+        var videoIframe = modal.querySelector('.instagram-media');
+
+        // Pause the video by reloading the iframe
+        var videoUrl = videoIframe.getAttribute('data-instgrm-permalink');
+        videoIframe.setAttribute('src', videoUrl);
+
+        // Close the modal
         modal.style.display = "none";
-        document.body.style.overflow = "auto";
     }
 </script>
 
