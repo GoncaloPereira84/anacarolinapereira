@@ -59,7 +59,7 @@ include "include/header.php";
         </div>
         <div class="cards-wrapper">
             <a title="O Método Rorschach na prática clínica">
-            <div class="card" onclick="openModalWithVideo('modal-rorschach'c
+            <div class="card" onclick="openModalWithVideo('modal-rorschach', 'https:www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading')">
                     <div class="card-title">Coimbra</div>
                     <div class="card-copy">
                         <i>
