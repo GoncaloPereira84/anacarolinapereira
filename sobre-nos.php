@@ -100,7 +100,7 @@ include "include/header.php";
 <div id="modal-rorschach" class="modal">
     <div class="modal-content">
         <!-- Conteúdo do modal para o Método Rorschach -->
-        <span class="closee" onclick="closeModalAndPauseVideo('modal-rorschach', 'www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-rorschach', 'https:www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading')">&times;</span>
         <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
@@ -198,7 +198,7 @@ include "include/header.php";
 <div id="modal-infancia" class="modal">
     <div class="modal-content">
         <!-- Conteúdo do modal para A Clínica da infância | Q&A -->
-        <span class="closee" onclick="closeModalAndPauseVideo('modal-infancia', 'www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-infancia', 'https:www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading')">&times;</span>
         <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
