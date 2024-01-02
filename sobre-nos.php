@@ -59,7 +59,7 @@ include "include/header.php";
         </div>
         <div class="cards-wrapper">
             <a title="O Método Rorschach na prática clínica">
-            <div class="card" onclick="openModalWithVideo('modal-rorschach', 'www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading')">
+            <div class="card" onclick="openModalWithVideo('modal-rorschach'c
                     <div class="card-title">Coimbra</div>
                     <div class="card-copy">
                         <i>
@@ -100,7 +100,7 @@ include "include/header.php";
 <div id="modal-rorschach" class="modal">
     <div class="modal-content">
         <!-- Conteúdo do modal para o Método Rorschach -->
-        <span class="closee" onclick="closeModalAndPauseVideo('modal-rorschach')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-rorschach', 'www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading')">&times;</span>
         <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/Cydej3QI20t/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
@@ -198,7 +198,7 @@ include "include/header.php";
 <div id="modal-infancia" class="modal">
     <div class="modal-content">
         <!-- Conteúdo do modal para A Clínica da infância | Q&A -->
-        <span class="closee" onclick="closeModalAndPauseVideo('modal-infancia')">&times;</span>
+        <span class="closee" onclick="closeModalAndPauseVideo('modal-infancia', 'www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading')">&times;</span>
         <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
@@ -467,23 +467,20 @@ include "include/header.php";
         var modal = document.getElementById(modalId);
         var videoIframe = modal.querySelector('.instagram-media');
 
-        // Set the video source
         videoIframe.setAttribute('data-instgrm-permalink', videoUrl);
 
-        // Open the modal
         modal.style.display = "block";
     }
 
-    function closeModalAndPauseVideo(modalId) {
+    function closeModalAndPauseVideo(modalId, videoUrl1) {
         var modal = document.getElementById(modalId);
         var videoIframe = modal.querySelector('.instagram-media');
 
-        // Pause the video by reloading the iframe
         var videoUrl = videoIframe.getAttribute('data-instgrm-permalink');
         videoIframe.setAttribute('src', videoUrl);
-
-        // Close the modal
+        
         modal.style.display = "none";
+        videoIframe.setAttribute('data-instgrm-permalink', videoUrl1);
     }
 </script>
 
