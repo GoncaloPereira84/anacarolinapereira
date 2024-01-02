@@ -200,11 +200,11 @@ include "include/header.php";
         <!-- Conteúdo do modal para A Clínica da infância | Q&A -->
         <span class="closee" onclick="closeModal('modal-infancia')">&times;</span>
         <blockquote class="instagram-media"
-            data-instgrm-permalink="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
+            data-instgrm-permalink="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
             style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             <div style="padding:16px;"> <a
-                    href="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    href="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
                     style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
                     target="_blank">
                     <div style=" display: flex; flex-direction: row; align-items: center;">
@@ -284,7 +284,7 @@ include "include/header.php";
                 </a>
                 <p
                     style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-                    <a href="https://www.instagram.com/reel/C0Py8Rxsl89/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    <a href="https://www.instagram.com/reel/C0UUnEAMFcH/?utm_source=ig_embed&amp;utm_campaign=loading"
                         style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
                         target="_blank">Uma publicação partilhada por Ana Carolina Pereira (@anacarolinapereirapc)</a>
                 </p>
@@ -297,7 +297,7 @@ include "include/header.php";
 
 <!-- <div class="servicos-wrapper">
     <div class="cards-wrapper"> -->
-        <!--?php
+<!--?php
         $areas_query = "SELECT * 
             from sobre_areas
             order by display_order asc";
@@ -318,7 +318,7 @@ include "include/header.php";
                     </div>';
         }
         ?> -->
-    <!-- </div>
+<!-- </div>
 </div>  -->
 
 <div id="equipa" class="equipa-wrapper-sobre-nos">
@@ -462,38 +462,25 @@ include "include/header.php";
     </div>
 </div>
 <script async src="//www.instagram.com/embed.js"></script>
-<!-- Adicione este trecho de código no seu arquivo PHP ou HTML -->
 <script>
-function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "block";
-}
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
 
-function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-
-    // Modifique o código para parar o vídeo quando o modal for fechado
-    var blockquote = modal.querySelector('.instagram-media');
-    if (blockquote) {
-        // Remova o atributo 'data-instgrm-permalink' para interromper a reprodução do vídeo
-        blockquote.removeAttribute('data-instgrm-permalink');
+        modal.addEventListener('click', function (event) {
+            if (event.target === modal) {
+                closeModal(modalId);
+            }
+        });
     }
 
-    modal.style.display = "none";
-}
-
-// Adicione a seguinte função para fechar o modal se o usuário clicar fora do conteúdo do modal
-window.onclick = function(event) {
-    var modals = document.getElementsByClassName('modal');
-    for (var i = 0; i < modals.length; i++) {
-        var modal = modals[i];
-        if (event.target === modal) {
-            closeModal(modal.id);
-        }
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
     }
-}
 </script>
-
 
 <?php
 include "include/footer.php";
