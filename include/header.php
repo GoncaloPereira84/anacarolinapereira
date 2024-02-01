@@ -25,56 +25,56 @@ else define('IMG_PATH', '/img');
             <meta property="og:description" content="Somos uma Clínica de Psicologia em Coimbra. Que abraça a infância, a adolescência e a adultez. Que considera o ato psicológico como de charneira entre a confiança na qualidade dos serviços profissionais especializados e a confiança de que, no espaço da relação clínica, se promova a saúde mental e familiar." />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/sobre-nos" />
             <meta property="og:title" content="Sobre Nós - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         } else if ($pathinfo[0] == 'servicos') {
             echo '<title>Serviços - Ana Carolina Pereira - Clínica de Psicologia</title>
             <meta name="description" content="A sua confiança pela nossa equipa e nos nossos serviços interpela e exige o compromisso, ético e profissional, de lhe proporcionarmos um conjunto de serviços clínicos especializados. Que condensam anos de prática clínica e contínua atualização profissional e académica." />
             <meta property="og:description" content="A sua confiança pela nossa equipa e nos nossos serviços interpela e exige o compromisso, ético e profissional, de lhe proporcionarmos um conjunto de serviços clínicos especializados. Que condensam anos de prática clínica e contínua atualização profissional e académica." />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/servicos" />
             <meta property="og:title" content="Serviços - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         } else if ($pathinfo[0] == 'academia') {
             echo '<title>Academia - Ana Carolina Pereira - Clínica de Psicologia</title>
             <meta name="description" content="A Academia. Pretende ser um espaço de conhecimento. De descoberta e exploração. De um horizonte aberto e infinito. Com capacidade de olhar desde o alto. De liberdade, portanto. De observar e aprender. Como uma garça. No fundo, será isso: a Academia como um espaço que nos possibilite voar para o infinito, pelo que aprendemos e pelo que partilhamos. Com e para pessoas. Com e para curiosos por aprender. E partilhar." />
             <meta property="og:description" content="A Academia. Pretende ser um espaço de conhecimento. De descoberta e exploração. De um horizonte aberto e infinito. Com capacidade de olhar desde o alto. De liberdade, portanto. De observar e aprender. Como uma garça. No fundo, será isso: a Academia como um espaço que nos possibilite voar para o infinito, pelo que aprendemos e pelo que partilhamos. Com e para pessoas. Com e para curiosos por aprender. E partilhar." />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/academia" />
             <meta property="og:title" content="Academia - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         } else if ($pathinfo[0] == 'blog') {
             echo '<title>Blog - Ana Carolina Pereira - Clínica de Psicologia</title>
             <meta name="description" content="Gosto de me sentir “em casa”. E, por isso, moro, também, aqui. Nos pensamentos que escrevo. Nos quais anseio, sempre, confidenciando o que fui aprendendo. O que continuo a aprender. Nas conversas..." />
             <meta property="og:description" content="Gosto de me sentir “em casa”. E, por isso, moro, também, aqui. Nos pensamentos que escrevo. Nos quais anseio, sempre, confidenciando o que fui aprendendo. O que continuo a aprender. Nas conversas..." />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/blog" />
             <meta property="og:title" content="Blog - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         } else if ($pathinfo[0] == 'contactos') {
             echo '<title>Contactos - Ana Carolina Pereira - Clínica de Psicologia</title>
             <meta name="description" content="Para qualquer questão que possamos corresponder, estamos, também, aqui!" />
             <meta property="og:description" content="Para qualquer questão que possamos corresponder, estamos, também, aqui!" />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/contactos" />
             <meta property="og:title" content="Contactos - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         } else if ($pathinfo[0] == 'perguntas-frequentes') {
             echo '<title>Perguntas Frequentes - Ana Carolina Pereira - Clínica de Psicologia</title>
             <meta name="description" content="Consulte as nossas Perguntas Frequentes para tirar dúvidas rápidas sobre a clínica e os nossos serviços." />
             <meta property="og:description" content="Consulte as nossas Perguntas Frequentes para tirar dúvidas rápidas sobre a clínica e os nossos serviços." />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/perguntas-frequentes" />
             <meta property="og:title" content="Perguntas Frequentes - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         } else if ($pathinfo[0] == 'politica-privacidade') {
             echo '<title>Política de Privacidade - Ana Carolina Pereira - Clínica de Psicologia</title>
             <meta name="description" content="Consulte a Política de Privacidade e os Termos e Condições para estar a par das condições de navegação do nosso site." />
             <meta property="og:description" content="Consulte a Política de Privacidade e os Termos e Condições para estar a par das condições de navegação do nosso site." />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/politica-privacidade" />
             <meta property="og:title" content="Política de Privacidade - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         } else if ($pathinfo[0] == 'marcar-consulta') {
             echo '<title>Marcar Consulta - Ana Carolina Pereira - Clínica de Psicologia</title>
             <meta name="description" content="Pode marcar rapidamente a sua consulta em Ana Carolina Pereira - Clínica de Psicologia através do nosso formulário online. Cómodo e eficiente!" />
             <meta property="og:description" content="Pode marcar rapidamente a sua consulta em Ana Carolina Pereira - Clínica de Psicologia através do nosso formulário online. Cómodo e eficiente!" />
             <meta property="og:url" content="https://www.anacarolinapereira.pt/marcar-consulta" />
             <meta property="og:title" content="Marcar Consulta - Ana Carolina Pereira - Clínica de Psicologia" />
-            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         }
     } else if (!isset($pathinfo[0])) {
         echo '<title>Ana Carolina Pereira - Clínica de Psicologia</title>
@@ -82,7 +82,7 @@ else define('IMG_PATH', '/img');
         <meta property="og:description" content="Somos uma Clínica de Psicologia em Coimbra que disponibiliza serviços para crianças, jovens e adultos. Marque já a sua consulta!" />
         <meta property="og:url" content="https://www.anacarolinapereira.pt" />
         <meta property="og:title" content="Ana Carolina Pereira - Clínica de Psicologia" />
-        <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+        <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
         echo '<link rel="shortcut icon" type="image/png" href="favicon.png" />';
     }
 
@@ -108,7 +108,7 @@ else define('IMG_PATH', '/img');
                         $dots = '../../httpdocs/';
                         $img_trimmed = str_replace($dots, '', $img);
                     } else {
-                        $img_trimmed = 'og-img.jpg';
+                        $img_trimmed = 'og-imgLogo.png';
                     }
 
                     $about_notags = str_replace(['<p>', '</p>', '<br>', '<o:p>', '</o:p>', '<u>', '</u>', '<i>', '</i>', '<b>', '</b>', '<a>', '</a>'], '', $p['text']);
@@ -144,7 +144,7 @@ else define('IMG_PATH', '/img');
                     <meta property="og:description" content="' . $about_trimmed . '" />
                     <meta property="og:url" content="https://www.anacarolinapereira.pt/srvicos/' . $s['slug'] . '" />
                     <meta property="og:title" content="' . $s['title'] . ' - Ana Carolina Pereira - Clínica de Psicologia" />
-                    <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+                    <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
                 }
             }
         }
@@ -208,7 +208,7 @@ else define('IMG_PATH', '/img');
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Ana Carolina Pereira - Clínica de Psicologia",
-            "image": "https://www.anacarolinapereira.pt/uploads/og-img.jpg",
+            "image": "https://www.anacarolinapereira.pt/uploads/og-imgLogo.png",
             "@id": "https://www.anacarolinapereira.pt/",
             "url": "https://www.anacarolinapereira.pt/",
             "telephone": "+351239132401",
@@ -322,7 +322,7 @@ else define('IMG_PATH', '/img');
                         $dots = '../../httpdocs/';
                         $img_trimmed = str_replace($dots, '', $img);
                     } else {
-                        $img_trimmed = 'og-img.jpg';
+                        $img_trimmed = 'og-imgLogo.png';
                     }
 
                     $about_notags = str_replace(['<p>', '</p>', '<br>', '<o:p>', '</o:p>', '<u>', '</u>', '<i>', '</i>', '<b>', '</b>', '<a>', '</a>'], '', $p['text']);
@@ -349,7 +349,7 @@ else define('IMG_PATH', '/img');
                         "name": "Ana Carolina Pereira",
                         "logo": {
                           "@type": "ImageObject",
-                          "url": "https://www.anacarolinapereira.pt/uploads/og-img.jpg"
+                          "url": "https://www.anacarolinapereira.pt/uploads/og-imgLogo.png"
                         }
                       },
                       "datePublished": "' . $p['date'] . '",
@@ -382,7 +382,7 @@ else define('IMG_PATH', '/img');
             //         <meta property="og:description" content="' . $about_trimmed . '" />
             //         <meta property="og:url" content="https://www.anacarolinapereira.pt/srvicos/' . $s['url_code'] . '" />
             //         <meta property="og:title" content="' . $s['title'] . ' - Ana Carolina Pereira - Clínica de Psicologia" />
-            //         <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-img.jpg" />';
+            //         <meta property="og:image" content="https://www.anacarolinapereira.pt/uploads/og-imgLogo.png" />';
             //     }
             // }
         }
