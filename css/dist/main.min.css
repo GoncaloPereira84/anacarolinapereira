@@ -525,9 +525,9 @@ html a {
     height: 100%
 }
 
-@media only screen and (max-height:415px) {
+@media only screen and (max-width:827px) {
     #app #menu .menu-wrapper>a .logoHorizontal {
-        width: 7.9375rem;
+        width: 15.9375rem;
         height: 100%
     }
 }
@@ -685,7 +685,7 @@ html a {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 5.625rem;
+    width: 13.625rem;
     height: 95%
 }
 
