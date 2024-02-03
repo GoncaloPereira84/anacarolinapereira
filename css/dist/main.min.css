@@ -517,6 +517,21 @@ html a {
     }
 }
 
+#app #menu .menu-wrapper>a .logoHorizontal {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 11.6875rem;
+    height: 100%
+}
+
+@media only screen and (max-height:415px) {
+    #app #menu .menu-wrapper>a .logoHorizontal {
+        width: 7.9375rem;
+        height: 100%
+    }
+}
+
 #app #menu .menu-wrapper .menu-items {
     max-width: 53.125rem;
     justify-content: space-between;

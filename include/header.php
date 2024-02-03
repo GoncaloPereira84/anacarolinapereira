@@ -569,7 +569,7 @@ else define('IMG_PATH', '/img');
         <div id="menu">
             <div class="menu-wrapper">
                 <a href="/">
-                    <div class="logo" style="background-image: url(<?php echo IMG_PATH; ?>/logo.png)"></div>
+                    <div class="logoHorizontal" style="background-image: url(<?php echo IMG_PATH; ?>/logoHorizontal.png)"></div>
                 </a>
                 <div class="menu-items">
                     <div class="menu-item">
