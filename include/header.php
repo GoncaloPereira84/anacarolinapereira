@@ -627,7 +627,7 @@ else define('IMG_PATH', '/img');
 
             <div class="menu-wrapper-mobile">
                 <a href="/">
-                    <div class="logo" style="background-image: url(<?php echo IMG_PATH; ?>/logo.png)"></div>
+                    <div class="logoHorizontal" style="background-image: url(<?php echo IMG_PATH; ?>/logoHorizontal.png)"></div>
                     <!-- <img :src="logo" alt /> -->
                 </a>
 
