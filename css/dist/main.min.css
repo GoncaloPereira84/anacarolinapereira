@@ -681,6 +681,14 @@ html a {
     height: 95%
 }
 
+#app #menu .menu-wrapper-mobile>a .logoHorizontal {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 5.625rem;
+    height: 95%
+}
+
 #app #menu .menu-wrapper-mobile .btn-menu {
     width: 3.125rem;
     height: 2.8125rem;
