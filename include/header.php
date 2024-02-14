@@ -3,11 +3,15 @@ include "config/start.php";
 
 $pathinfo = getPathInfo();
 
-if (isset($pathinfo[0])) $area = $pathinfo[0];
-else $area = 'home';
+if (isset($pathinfo[0]))
+    $area = $pathinfo[0];
+else
+    $area = 'home';
 
-if(isset($pathinfo[1])) define('IMG_PATH', '../../img');
-else define('IMG_PATH', '/img');
+if (isset($pathinfo[1]))
+    define('IMG_PATH', '../../img');
+else
+    define('IMG_PATH', '/img');
 ?>
 
 <!DOCTYPE HTML>
@@ -104,7 +108,7 @@ else define('IMG_PATH', '/img');
                 if ($p['url_code'] == $pathinfo[1]) {
 
                     $img = $p['img_src'];
-                    if($img == !null) {
+                    if ($img == !null) {
                         $dots = '../../httpdocs/';
                         $img_trimmed = str_replace($dots, '', $img);
                     } else {
@@ -122,14 +126,14 @@ else define('IMG_PATH', '/img');
                         <meta property="og:image" content="https://www.anacarolinapereira.pt/' . $img_trimmed . '" />';
                 }
             }
-        } else if($pathinfo[0] == 'servicos'){
+        } else if ($pathinfo[0] == 'servicos') {
             echo '<link rel="shortcut icon" type="image/png" href="../favicon.png" />';
             $servicos_query_1 = "SELECT * 
             from servicos";
-        
+
             $result1 = mysqli_query($conn, $servicos_query_1);
             $serv = array();
-        
+
             while ($row1 = mysqli_fetch_assoc($result1)) {
                 $serv[] = $row1;
             }
@@ -318,7 +322,7 @@ else define('IMG_PATH', '/img');
                 if ($p['url_code'] == $pathinfo[1]) {
 
                     $img = $p['img_src'];
-                    if($img == !null) {
+                    if ($img == !null) {
                         $dots = '../../httpdocs/';
                         $img_trimmed = str_replace($dots, '', $img);
                     } else {
@@ -327,7 +331,7 @@ else define('IMG_PATH', '/img');
 
                     $about_notags = str_replace(['<p>', '</p>', '<br>', '<o:p>', '</o:p>', '<u>', '</u>', '<i>', '</i>', '<b>', '</b>', '<a>', '</a>'], '', $p['text']);
                     $about_trimmed = (strlen($about_notags) > 160) ? substr($about_notags, 0, 160) . '...' : $about_notags;
-                    
+
                     echo '
                     <script type="application/ld+json">
                     {
@@ -359,24 +363,24 @@ else define('IMG_PATH', '/img');
                     ';
                 }
             }
-        } else if($pathinfo[0] == 'servicos'){
+        } else if ($pathinfo[0] == 'servicos') {
             // echo '<link rel="shortcut icon" type="image/png" href="../favicon.png" />';
             // $servicos_query_1 = "SELECT * 
             // from servico_details
             // inner join servicos_topicos on servicos_topicos.id = servico_details.servicos_topicos_id";
-        
+    
             // $result1 = mysqli_query($conn, $servicos_query_1);
             // $serv = array();
-        
+    
             // while ($row1 = mysqli_fetch_assoc($result1)) {
             //     $serv[] = $row1;
             // }
-
+    
             // foreach ($serv as $s) {
             //     if ($s['url_code'] == $pathinfo[1]) {
             //         $about_notags = str_replace(['<p>', '</p>', '<br>', '<o:p>', '</o:p>', '<u>', '</u>', '<i>', '</i>', '<b>', '</b>', '<a>', '</a>'], '', $s['text']);
             //         $about_trimmed = (strlen($about_notags) > 160) ? substr($about_notags, 0, 160) . '...' : $about_notags;
-
+    
             //         echo '<title>' . $s['title'] . ' - Ana Carolina Pereira - Clínica de Psicologia</title>
             //         <meta name="description" content="' . $about_trimmed . '" />
             //         <meta property="og:description" content="' . $about_trimmed . '" />
@@ -569,7 +573,7 @@ else define('IMG_PATH', '/img');
         <div id="menu">
             <div class="menu-wrapper">
                 <a href="/">
-                    <div class="logo" style="background-image: url(<?php echo IMG_PATH; ?>/logo.png)"></div>
+                    <div class="logoHorizontal" style="background-image: url(<?php echo IMG_PATH; ?>/logoHorizontal.png)"></div>
                 </a>
                 <div class="menu-items">
                     <div class="menu-item">
@@ -627,8 +631,7 @@ else define('IMG_PATH', '/img');
 
             <div class="menu-wrapper-mobile">
                 <a href="/">
-                    <div class="logo" style="background-image: url(<?php echo IMG_PATH; ?>/logo.png)"></div>
-                    <!-- <img :src="logo" alt /> -->
+                    <div class="logoHorizontal" style="background-image: url(<?php echo IMG_PATH; ?>/logoHorizontal.png)"></div>
                 </a>
 
                 <div class="btn-menu" onClick="openMenuMobile()">

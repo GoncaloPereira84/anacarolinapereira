@@ -517,6 +517,21 @@ html a {
     }
 }
 
+#app #menu .menu-wrapper>a .logoHorizontal {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 27.6875rem;
+    height: 100%
+}
+
+@media only screen and (max-width:827px) {
+    #app #menu .menu-wrapper>a .logoHorizontal {
+        width: 15.9375rem;
+        height: 100%
+    }
+}
+
 #app #menu .menu-wrapper .menu-items {
     max-width: 53.125rem;
     justify-content: space-between;
@@ -663,6 +678,14 @@ html a {
     background-position: center;
     background-repeat: no-repeat;
     width: 5.625rem;
+    height: 95%
+}
+
+#app #menu .menu-wrapper-mobile>a .logoHorizontal {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 13.625rem;
     height: 95%
 }
 
